@@ -1,13 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
-// import { CartContextProvider } from './context/CartContext'
-// import { Router } from "./routes/Router";
 import { GlobalStyle } from "./styles/global";
+import { Router } from "./routes/Router";
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <BrowserRouter>
+        <Router />
       </BrowserRouter>
     </>
   );
