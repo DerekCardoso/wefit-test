@@ -1,12 +1,14 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { BrowserRouter } from "react-router-dom";
+// import { CartContextProvider } from './context/CartContext'
+// import { Router } from "./routes/Router";
 import { GlobalStyle } from "./styles/global";
 
 function App() {
   return (
     <>
       <GlobalStyle />
+      <BrowserRouter>
+      </BrowserRouter>
     </>
   );
 }
