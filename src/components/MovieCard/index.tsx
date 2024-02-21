@@ -2,7 +2,7 @@ import { useContext } from "react";
 import cartIcon from "../../assets/cart-icon.png";
 import { CartContext } from "../../context/CartContext";
 import { MovieModel } from "../../models/movieModel";
-// import { ButtonContainer } from "../Button/styles";
+import { ButtonContainer } from "../Button/styles";
 import { MovieCardContainer, MovieCardInfo } from "./styles";
 
 type MovieCardProps = {
@@ -32,7 +32,7 @@ export const MovieCard = ({ movie, onAddButtonClicked }: MovieCardProps) => {
             currency: "BRL",
           }).format(movie.price)}
         </p>
-        {/* <ButtonContainer
+        <ButtonContainer
           disabled={isMovieAtCartCheck(movie.id)}
           onClick={() => onAddButtonClicked()}
           width="homeButton"
@@ -45,7 +45,7 @@ export const MovieCard = ({ movie, onAddButtonClicked }: MovieCardProps) => {
           {!isMovieAtCartCheck(movie.id)
             ? "ADICIONAR AO CARRINHO"
             : "ITEM ADICIONADO"}
-        </ButtonContainer> */}
+        </ButtonContainer>
       </MovieCardInfo>
     </MovieCardContainer>
   );
