@@ -22,7 +22,7 @@ export const CartItem = ({ id, title, price, image }: CartItemProps) => {
       <td>
         <div>
           <img src={image} alt="Capa do filme" className="movie-cover" />
-          <div>
+          <div className="title">
             <h4>{title}</h4>
             <span>
               {new Intl.NumberFormat("pt-BR", {
@@ -34,7 +34,7 @@ export const CartItem = ({ id, title, price, image }: CartItemProps) => {
         </div>
       </td>
       <td>
-        <div>
+        <div className="count">
           <button
             disabled={quantity === 1}
             onClick={() => {
@@ -56,7 +56,7 @@ export const CartItem = ({ id, title, price, image }: CartItemProps) => {
         </div>
       </td>
       <td>
-        <span>
+        <span className="price">
           {new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL",
@@ -64,7 +64,10 @@ export const CartItem = ({ id, title, price, image }: CartItemProps) => {
         </span>
       </td>
       <td>
-        <button onClick={() => handleRemoveMovieFromCart(id)}>
+        <button
+          className="trashButton"
+          onClick={() => handleRemoveMovieFromCart(id)}
+        >
           <img src={trashIcon} alt="Botão remover" />
         </button>
       </td>

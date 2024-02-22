@@ -6,6 +6,12 @@ export const MovieCardContainer = styled.div`
 
   border-radius: 4px;
   background-color: #fff;
+
+  @media (max-width: 600px) {
+    width: 343px;
+    padding: 10px, 11px, 10px, 11px;
+    margin: 8px auto; /* Centralizando o container na tela */
+  }
 `;
 
 export const MovieCardInfo = styled.div`
